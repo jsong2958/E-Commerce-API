@@ -1,0 +1,13 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: cornflowerblue;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
