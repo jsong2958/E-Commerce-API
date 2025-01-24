@@ -160,7 +160,7 @@ GET /cart/{cartId}
 
 
 ```http
-GET /cart/{cartId}
+DELETE /cart/{cartId}
 ```
 
 Request Body:
