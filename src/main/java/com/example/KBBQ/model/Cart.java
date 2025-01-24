@@ -1,7 +1,9 @@
 package com.example.KBBQ.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -29,6 +31,14 @@ public class Cart {
     @JoinColumn(name="cart_id")
     private List<CartItem> items;
 
+    public Cart(Customer customer) {
+        this.customer = customer;
+    }
+
+    public void addCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     public void addItem(CartItem item) {
         this.items.add(item);
     }
@@ -38,5 +48,7 @@ public class Cart {
             this.total += item.getPrice();
         }
     }
+
+
 
 }
