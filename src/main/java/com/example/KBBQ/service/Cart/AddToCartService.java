@@ -26,8 +26,10 @@ public class AddToCartService {
 
         if (cart.isPresent()) {
 
-            cart.get().addItem(item);
+            item.setCartId(cart.get().getId());
 
+            cart.get().addItem(item);
+            cart.get().setTotal(item.getPrice() * item.getQuantity());
             return ResponseEntity.ok(cart.get());
         }
 

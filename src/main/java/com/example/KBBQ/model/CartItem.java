@@ -3,7 +3,6 @@ package com.example.KBBQ.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-
 @Entity
 @Table(name = "cart_items")
 @Data
@@ -25,6 +24,7 @@ public class CartItem {
 
     @Column(name="cart_id")
     private Integer cartId;
+
 
 
 }
