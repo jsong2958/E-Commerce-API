@@ -26,7 +26,7 @@ cd "E-Commerce-API"
 mvn install
 ```
 
-4.Run the application:
+4. Run the application:
 
 ```bash
 mvn spring-boot:run
@@ -81,4 +81,91 @@ Request Body:
   "phone_number": "+1234567890",
   "shipping_address": "1234 Elm Street, Springfield, IL, 62701"
 }
+```
+
+#### Create Item
+
+
+```http
+POST /items
+```
+
+Request Body:
+
+```json
+{
+  "id": 1,
+  "product": "Grilled Chicken",
+  "quantity": 2,
+  "price": 50.00,
+  "cart_id": 101
+}
+
+```
+
+#### Create Cart
+
+
+```http
+POST /cart
+```
+
+#### Add Item To Cart
+
+
+```http
+POST /cart/items/{cartId}
+```
+
+Request Body:
+
+```json
+{
+  "id": 1,
+  "product": "Grilled Chicken",
+  "quantity": 2,
+  "price": 50.00,
+  "cart_id": 101
+}
+
+```
+
+#### Add Customer To Cart
+
+
+```http
+POST /cart/customer/{cartId}
+```
+
+Request Body:
+
+```json
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "phone_number": "+1234567890",
+  "shipping_address": "1234 Elm Street, Springfield, IL, 62701"
+}
+
+```
+
+#### Get Cart
+
+
+```http
+GET /cart/{cartId}
+```
+
+#### Delete Item From Cart
+
+
+```http
+GET /cart/{cartId}
+```
+
+Request Body:
+
+```json
+Grilled Chicken
+
 ```
