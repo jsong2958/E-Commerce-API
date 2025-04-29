@@ -6,7 +6,7 @@ A RESTful API designed to manage products, orders, and users for an e-commerce p
 
 ## Installation
 
-Below is an example on how to run this API.
+Below is on how to run this API.
 
 1. Clone this repository:
 
